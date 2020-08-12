@@ -10,12 +10,8 @@ namespace Clinic.VR
         public int DepartmentID { get; set; } //  departament_id int
         public string Office { get; set; } //  office varchar(255)
         public DateTime HiredAt { get; set; } //  hired_at timestamp
-        public ICollection<DocSchedule> DocSchedule { get; set; }
-        public List<DepartmentDoc> DepartmentDocs { get; set; }
+        public ICollection<DepartmentDoc> DepartmentDocs { get; set; }
+        public ICollection<DocSchedule> DocSchedules { get; set; }  
 
-        public Doc()
-        {
-            DepartmentDocs = new List<DepartmentDoc>();
-        }
     }
 }
