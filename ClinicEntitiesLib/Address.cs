@@ -1,14 +1,24 @@
-﻿namespace Clinic.VR
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Clinic.VR
 {
     public class Address
     {
+        [Column("id")]
         public int AddressID { get; set; } //  id int
-        public int ZipCode { get; set; } //  zipcode varchar(255)
+        [Column("zipcode", TypeName = "varchar(255)")]
+        public string ZipCode { get; set; } //  zipcode varchar(255)
+        [Column("country", TypeName = "varchar(255)")]
         public string Country { get; set; } //  country varchar(255)
+        [Column("region", TypeName = "varchar(255)")]
         public string Region { get; set; } //  region varchar(255)
+        [Column("locality", TypeName = "varchar(255)")]
         public string Locality { get; set; } //  locality varchar(255)
+        [Column("street", TypeName = "varchar(255)")]
         public string Street { get; set; } //  street varchar(255)
+        [Column("house", TypeName = "varchar(255)")]
         public string House { get; set; } //  house varchar(255)
+        [Column("apartment", TypeName = "varchar(255)")]
         public string Apartment { get; set; } //  apartment varchar(255)
 
     }

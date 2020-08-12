@@ -1,0 +1,3 @@
+C:\Users\Vlad\source\repos\Clinic\ClinicContextLib\bin\Debug\netstandard2.0\ClinicEntitiesLib.dll
+C:\Users\Vlad\source\repos\Clinic\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.AssemblyInfoInputs.cache
+C:\Users\Vlad\source\repos\Clinic\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.AssemblyInfo.cs

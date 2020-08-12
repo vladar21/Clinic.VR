@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicEntitiesLib", "ClinicEntitiesLib\ClinicEntitiesLib.csproj", "{0D467622-6ED0-4E61-AD2B-A02E477E5259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicContextLib", "ClinicContextLib\ClinicContextLib.csproj", "{860FD2EC-A27E-45B4-AF9F-96E5E7E31AFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0D467622-6ED0-4E61-AD2B-A02E477E5259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D467622-6ED0-4E61-AD2B-A02E477E5259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D467622-6ED0-4E61-AD2B-A02E477E5259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860FD2EC-A27E-45B4-AF9F-96E5E7E31AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860FD2EC-A27E-45B4-AF9F-96E5E7E31AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860FD2EC-A27E-45B4-AF9F-96E5E7E31AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860FD2EC-A27E-45B4-AF9F-96E5E7E31AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
