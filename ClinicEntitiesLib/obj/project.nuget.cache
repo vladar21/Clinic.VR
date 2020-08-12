@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9yiSF+Ss9XbR+/ZFbNLxwFiS9ty0m4s/0R1vSBNsj7HnZdUOPS/ba28b9rpJgIfO8eKGyESyJ1R25sAhUz25ng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vlad\\source\\repos\\Clinic\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
