@@ -1,6 +1,6 @@
 ﻿namespace Clinic.VR
 {
-    class Address
+    public class Address
     {
         public int AddressID { get; set; } //  id int
         public int ZipCode { get; set; } //  zipcode varchar(255)
