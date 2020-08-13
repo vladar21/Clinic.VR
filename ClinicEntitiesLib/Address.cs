@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Clinic.VR
 {
@@ -20,6 +21,7 @@ namespace Clinic.VR
         public string House { get; set; } //  house varchar(255)
         [Column("apartment", TypeName = "varchar(255)")]
         public string Apartment { get; set; } //  apartment varchar(255)
-
+        public ICollection<Contact> Contacts { get; set; }
+        
     }
 }
