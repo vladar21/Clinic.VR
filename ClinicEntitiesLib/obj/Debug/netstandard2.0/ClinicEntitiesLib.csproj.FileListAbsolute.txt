@@ -3,3 +3,12 @@ C:\Users\Vlad\source\repos\Clinic\ClinicEntitiesLib\bin\Debug\netstandard2.0\Cli
 C:\Users\Vlad\source\repos\Clinic\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csprojAssemblyReference.cache
 C:\Users\Vlad\source\repos\Clinic\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.AssemblyInfoInputs.cache
 C:\Users\Vlad\source\repos\Clinic\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.AssemblyInfo.cs
+C:\www\Clinic.VR\ClinicEntitiesLib\bin\Debug\netstandard2.0\ClinicEntitiesLib.deps.json
+C:\www\Clinic.VR\ClinicEntitiesLib\bin\Debug\netstandard2.0\ClinicEntitiesLib.dll
+C:\www\Clinic.VR\ClinicEntitiesLib\bin\Debug\netstandard2.0\ClinicEntitiesLib.pdb
+C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.AssemblyInfoInputs.cache
+C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.AssemblyInfo.cs
+C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.dll
+C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.pdb
+C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csproj.CoreCompileInputs.cache
+c:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csprojAssemblyReference.cache

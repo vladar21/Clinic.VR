@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {}
+    "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {}
   },
   "projects": {
-    "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {
+    "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
+        "projectUniqueName": "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
         "projectName": "ClinicContextLib",
-        "projectPath": "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
+        "projectPath": "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\Clinic.VR\\ClinicContextLib\\obj\\",
+        "outputPath": "c:\\www\\Clinic.VR\\ClinicContextLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
-                "projectPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj"
+              "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
+                "projectPath": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj"
               }
             }
           }
@@ -42,7 +42,7 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[3.1.7, )"
             },
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
+    "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+        "projectUniqueName": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
         "projectName": "ClinicEntitiesLib",
-        "projectPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+        "projectPath": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\obj\\",
+        "outputPath": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
