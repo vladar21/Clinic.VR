@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rr22low+YzN6bDQRnLshJGzq2CkG24PGsjTwt4NEf9gK3WBjDUO/xMnBnT7hLeADnduura+5/kLsUXQTzGL5og==",
+  "dgSpecHash": "3VtFAWyDLqyIbSQqY11RHOxai5Uv8FcBIlZ3IyZ4nDibu2DMHwikcztQO42nbwMlyfDrD29QP3SDLI5cybAg0Q==",
   "success": true,
-  "projectFilePath": "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
+  "projectFilePath": "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -2,7 +2,7 @@
 
 namespace Clinic.VR
 {
-    public class Clinic : DbContext
+    public class ClinicDbContext : DbContext
     {
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Contact> Contacts { get; set; }
@@ -12,8 +12,6 @@ namespace Clinic.VR
         public DbSet<DocSchedule> DocSchedules { get; set; }
         public DbSet<Patient> Patients { get; set; }
         
-        public Clinic(DbContextOptions options)
-        : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("Data Source=sqliteclinic.db");

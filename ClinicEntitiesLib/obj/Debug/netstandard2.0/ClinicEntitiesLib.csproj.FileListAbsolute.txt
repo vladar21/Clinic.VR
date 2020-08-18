@@ -11,4 +11,4 @@ C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.As
 C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.dll
 C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.pdb
 C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csproj.CoreCompileInputs.cache
-c:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csprojAssemblyReference.cache
+C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csprojAssemblyReference.cache

@@ -26,7 +26,7 @@ namespace Clinic.VR
         [Column("zipcode", TypeName = "timestamp")]
         public DateTime UpdatedAt { get; set; } //  updated_at timestamp
         public ICollection<Doc> Docs { get; set; }
-        public Patient Patient { get; set; }
+        //public Patient Patient { get; set; }
 
     }
 }

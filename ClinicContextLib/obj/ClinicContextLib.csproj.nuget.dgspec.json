@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {}
+    "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {}
   },
   "projects": {
-    "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {
+    "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
+        "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
         "projectName": "ClinicContextLib",
-        "projectPath": "c:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
+        "projectPath": "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "c:\\www\\Clinic.VR\\ClinicContextLib\\obj\\",
+        "outputPath": "C:\\www\\Clinic.VR\\ClinicContextLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
-                "projectPath": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj"
+              "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
+                "projectPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj"
               }
             }
           }
@@ -67,14 +67,14 @@
         }
       }
     },
-    "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
+    "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+        "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
         "projectName": "ClinicEntitiesLib",
-        "projectPath": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+        "projectPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "c:\\www\\Clinic.VR\\ClinicEntitiesLib\\obj\\",
+        "outputPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
