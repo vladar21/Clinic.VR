@@ -11,7 +11,7 @@ namespace Clinic.VR
         [Column("contact_id")]
         public int ContactID { get; set; } //  contact_id int
         [Column("medical_history_registore_number", TypeName = "timestamp")]
-        //public Contact Contact { get; set; }
+        public Contact Contact { get; set; }
         public string MedicalHistoryRegistoreNumber { get; set; } //  medical_history_registore_number varchar(255)
         [Column("created_at", TypeName = "timestamp")]
         public DateTime CreatedAt { get; set; } //  created_at timestamp

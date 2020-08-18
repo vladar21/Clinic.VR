@@ -51,11 +51,11 @@ namespace Clinic.VR
             modelBuilder.Entity<Contact>().Property(c => c.LastName).IsRequired().HasMaxLength(255);
             modelBuilder.Entity<Contact>().Property(c => c.Phone).IsRequired().HasMaxLength(255);
             modelBuilder.Entity<Contact>().Property(c => c.Email).HasMaxLength(255);
+            
+            modelBuilder.Entity<Contact>().HasOne(c => c.Patient).WithOne(p => p.Contact).HasForeignKey<Patient>(p => p.ContactID);
 
             // Сущность Patient
-            //modelBuilder.Entity<Patient>().HasOne(p => p.Contact).WithOne(c => c.Patient).HasForeignKey<Contact>(p => p.ContactID).IsRequired();
-
-            //modelBuilder.Entity<Patient>().Property(p => p.MedicalHistoryRegistoreNumber).IsRequired().HasMaxLength(255);
+            modelBuilder.Entity<Patient>().Property(p => p.MedicalHistoryRegistoreNumber).IsRequired().HasMaxLength(255);
 
             // Сущность Doc       
             modelBuilder.Entity<Doc>().HasOne(d => d.Contact).WithMany(c => c.Docs);
@@ -63,8 +63,8 @@ namespace Clinic.VR
 
             // Сущность DepartmentDoc
             modelBuilder.Entity<DepartmentDoc>().HasKey(dd => new { dd.DepartmentID, dd.DocID });
-            //modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Department).WithMany(d => DepartmentDocs).HasForeignKey(dd => dd.DepartmentID);
-            //modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Doc).WithMany(d => DepartmentDocs).HasForeignKey(dd => dd.DocID);
+            modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Department).WithMany(d => DepartmentDocs).HasForeignKey(dd => dd.DepartmentID);
+            modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Doc).WithMany(d => DepartmentDocs).HasForeignKey(dd => dd.DocID);
 
             // Сущность DocSchedule
             modelBuilder.Entity<DocSchedule>().HasOne(d => d.Patient).WithMany(p => p.DocSchedules);
