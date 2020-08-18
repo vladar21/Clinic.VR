@@ -11,10 +11,10 @@ namespace Clinic.VR
         public DbSet<Doc> Docs { get; set; }
         public DbSet<DocSchedule> DocSchedules { get; set; }
         public DbSet<Patient> Patients { get; set; }
-        
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite("Data Source=sqliteclinic.db");
+
+        public ClinicDbContext(DbContextOptions options)
+            : base(options) { }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -63,8 +63,8 @@ namespace Clinic.VR
 
             // Сущность DepartmentDoc
             modelBuilder.Entity<DepartmentDoc>().HasKey(dd => new { dd.DepartmentID, dd.DocID });
-            modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Department).WithMany(d => DepartmentDocs).HasForeignKey(dd => dd.DepartmentID);
-            modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Doc).WithMany(d => DepartmentDocs).HasForeignKey(dd => dd.DocID);
+            modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Department).WithMany(d => d.DepartmentDocs).HasForeignKey(dd => dd.DepartmentID);
+            modelBuilder.Entity<DepartmentDoc>().HasOne(dd => dd.Doc).WithMany(d => d.DepartmentDocs).HasForeignKey(dd => dd.DocID);
 
             // Сущность DocSchedule
             modelBuilder.Entity<DocSchedule>().HasOne(d => d.Patient).WithMany(p => p.DocSchedules);
