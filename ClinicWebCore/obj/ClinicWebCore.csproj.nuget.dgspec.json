@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {}
+    "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {
+    "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
+        "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
         "projectName": "ClinicWebCore",
-        "projectPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
-        "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\obj\\",
+        "projectPath": "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\www\\Clinic.VR\\ClinicWebCore\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,6 +54,10 @@
               "target": "Package",
               "version": "[3.1.7, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -66,6 +65,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
             }
           },
           "imports": [
