@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "UVtpypPZZx7tEta/kuQHFoevmZ11aSLCQhMtawab/pAX1Cpeah7hMR1VgdWca2c56s9nub8n8WjmVYMZanXJAA==",
+  "dgSpecHash": "1R/eUDX5bpFUDMjDtvxyfqq0p6eGmm2gjkUz8Mm2wOAMmlgZfAC9mVB7XaX7Tn0sQKwbs+mOHCR5CR60RUIL+A==",
   "success": true,
-  "projectFilePath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+  "projectFilePath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Vlad\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

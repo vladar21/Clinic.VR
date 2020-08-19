@@ -13,6 +13,8 @@ namespace ClinicWebCore.Models
         public Contact Contact { get; set; }
         [Column("department_id")]
         public int DepartmentID { get; set; } //  departament_id int
+        [Column("specialty", TypeName = "varchar(255)")]
+        public string Specialty { get; set; } //  specialty varchar(255)
         [Column("office", TypeName = "varchar(255)")]
         public string Office { get; set; } //  office varchar(255)
         [Column("hired_at", TypeName = "timestamp")]

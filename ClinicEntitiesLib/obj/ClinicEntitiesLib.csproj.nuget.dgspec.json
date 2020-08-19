@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {}
+    "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {}
   },
   "projects": {
-    "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
+    "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+        "projectUniqueName": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
         "projectName": "ClinicEntitiesLib",
-        "projectPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\obj\\",
+        "projectPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj",
+        "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"

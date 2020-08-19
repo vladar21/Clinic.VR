@@ -6217,20 +6217,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Vlad\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
+      "projectUniqueName": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
       "projectName": "ClinicContextLib",
-      "projectPath": "C:\\www\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\www\\Clinic.VR\\ClinicContextLib\\obj\\",
+      "projectPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicContextLib\\ClinicContextLib.csproj",
+      "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicContextLib\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -6242,8 +6249,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
-              "projectPath": "C:\\www\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj"
+            "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj": {
+              "projectPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicEntitiesLib\\ClinicEntitiesLib.csproj"
             }
           }
         }

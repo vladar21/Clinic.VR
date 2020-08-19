@@ -9,9 +9,9 @@ namespace ClinicWebCore.Models
         [Column("id")]
         public int PatientID { get; set; } //  id int       
         [Column("contact_id")]
-        public int ContactID { get; set; } //  contact_id int
-        [Column("medical_history_registore_number", TypeName = "timestamp")]
+        public int ContactID { get; set; } //  contact_id int        
         public Contact Contact { get; set; }
+        [Column("medical_history_registore_number", TypeName = "timestamp")]
         public string MedicalHistoryRegistoreNumber { get; set; } 
         //  medical_history_registore_number varchar(255)
         [Column("created_at", TypeName = "timestamp")]

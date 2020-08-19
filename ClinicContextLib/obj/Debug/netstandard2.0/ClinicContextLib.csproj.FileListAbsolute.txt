@@ -13,3 +13,15 @@ C:\www\Clinic.VR\ClinicContextLib\bin\Debug\netstandard2.0\ClinicContextLib.pdb
 C:\www\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.dll
 C:\www\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.pdb
 C:\www\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.csproj.CoreCompileInputs.cache
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\bin\Debug\netstandard2.0\ClinicContextLib.deps.json
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\bin\Debug\netstandard2.0\ClinicContextLib.dll
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\bin\Debug\netstandard2.0\ClinicContextLib.pdb
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\bin\Debug\netstandard2.0\ClinicEntitiesLib.dll
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\bin\Debug\netstandard2.0\ClinicEntitiesLib.pdb
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.csprojAssemblyReference.cache
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.AssemblyInfoInputs.cache
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.AssemblyInfo.cs
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.csproj.CoreCompileInputs.cache
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.csproj.CopyComplete
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.dll
+C:\Users\Vlad\source\repos\Clinic.VR\ClinicContextLib\obj\Debug\netstandard2.0\ClinicContextLib.pdb

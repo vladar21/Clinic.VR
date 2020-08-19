@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {}
+    "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {}
   },
   "projects": {
-    "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {
+    "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
+        "projectUniqueName": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
         "projectName": "ClinicWebCore",
-        "projectPath": "C:\\www\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\Clinic.VR\\ClinicWebCore\\obj\\",
+        "projectPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\ClinicWebCore.csproj",
+        "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vlad\\source\\repos\\Clinic.VR\\ClinicWebCore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClinicWebCore.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -93,7 +93,9 @@ namespace ClinicWebCore.Migrations
                     phone = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     email = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     address_id = table.Column<int>(nullable: false),
-                    zipcode = table.Column<DateTime>(type: "timestamp", nullable: false)
+                    birthday = table.Column<DateTime>(type: "timestamp", nullable: false),
+                    created_at = table.Column<DateTime>(type: "timestamp", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "timestamp", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -220,6 +222,7 @@ namespace ClinicWebCore.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     contact_id = table.Column<int>(nullable: false),
                     department_id = table.Column<int>(nullable: false),
+                    specialty = table.Column<string>(type: "varchar(255)", nullable: true),
                     office = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     hired_at = table.Column<DateTime>(type: "timestamp", nullable: false)
                 },
@@ -241,8 +244,7 @@ namespace ClinicWebCore.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     contact_id = table.Column<int>(nullable: false),
-                    medical_history_registore_number = table.Column<byte[]>(type: "timestamp", nullable: true),
-                    MedicalHistoryRegistoreNumber = table.Column<string>(maxLength: 255, nullable: false),
+                    medical_history_registore_number = table.Column<string>(type: "timestamp", maxLength: 255, nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp", nullable: false),
                     updated_at = table.Column<DateTime>(type: "timestamp", nullable: false)
                 },
@@ -321,6 +323,161 @@ namespace ClinicWebCore.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Addresses",
+                columns: new[] { "id", "apartment", "country", "house", "locality", "region", "street", "zipcode" },
+                values: new object[] { 1, "24", "Україна", "151", "Запоріжжя", "Запорізька область", "пр. Соборний", "69000" });
+
+            migrationBuilder.InsertData(
+                table: "Addresses",
+                columns: new[] { "id", "apartment", "country", "house", "locality", "region", "street", "zipcode" },
+                values: new object[] { 2, "7", "Україна", "11", "Запоріжжя", "Запорізька область", "площф Маяковського", "69001" });
+
+            migrationBuilder.InsertData(
+                table: "Addresses",
+                columns: new[] { "id", "apartment", "country", "house", "locality", "region", "street", "zipcode" },
+                values: new object[] { 3, "112", "Україна", "230", "Запоріжжя", "Запорізька область", "пр. Ювілейний", "69003" });
+
+            migrationBuilder.InsertData(
+                table: "Addresses",
+                columns: new[] { "id", "apartment", "country", "house", "locality", "region", "street", "zipcode" },
+                values: new object[] { 4, "19", "Україна", "10", "Запоріжжя", "Запорізька область", "бульвар Шевченка", "69004" });
+
+            migrationBuilder.InsertData(
+                table: "Addresses",
+                columns: new[] { "id", "apartment", "country", "house", "locality", "region", "street", "zipcode" },
+                values: new object[] { 5, "129", "Україна", "97", "Запоріжжя", "Запорізька область", "вулиця Перемоги ", "69005" });
+
+            migrationBuilder.InsertData(
+                table: "Addresses",
+                columns: new[] { "id", "apartment", "country", "house", "locality", "region", "street", "zipcode" },
+                values: new object[] { 6, "39", "Україна", "117", "Запоріжжя", "Запорізька область", "вулиця Запорізького Козацтва", "69003" });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "id", "created_at", "name", "parent_id", "updated_at" },
+                values: new object[] { 1, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "Адміністрація", null, new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "id", "created_at", "name", "parent_id", "updated_at" },
+                values: new object[] { 2, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "Головний лікарь", 1, new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "id", "created_at", "name", "parent_id", "updated_at" },
+                values: new object[] { 3, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "Стаціонар", null, new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "id", "created_at", "name", "parent_id", "updated_at" },
+                values: new object[] { 4, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "хірургічне відділення", 3, new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "id", "created_at", "name", "parent_id", "updated_at" },
+                values: new object[] { 5, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "Амбулаторно-поліклінічна служба", null, new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "id", "created_at", "name", "parent_id", "updated_at" },
+                values: new object[] { 6, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "амбулаторне ортопедично-травматологічне відділення", 5, new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "id", "created_at", "name", "parent_id", "updated_at" },
+                values: new object[] { 7, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "терапевтичне відділення", 3, new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 1, 1, new DateTime(1950, 3, 3, 10, 30, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "olga@com.ua", "Ольга", "Бородіна", "Вікторівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 4, 1, new DateTime(1951, 8, 2, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "ivan@com.ua", "Іван", "Бородін", "Володимирович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 2, 2, new DateTime(1955, 11, 23, 21, 5, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "mariya@com.ua", "Марія", "Колесник", "Олександрівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 5, 2, new DateTime(1954, 5, 4, 13, 15, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "gnat@com.ua", "Гнат", "Колесник", "Миколайович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 6, 2, new DateTime(1981, 2, 9, 8, 38, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "alena@com.ua", "Олена", "Колесник", "Гнатовна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 3, 3, new DateTime(1970, 7, 15, 14, 35, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "semen@com.ua", "Семен", "Коротич", "Павлович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 7, 4, new DateTime(1981, 3, 2, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "vitaly@com.ua", "Віталій", "Чуб", "Сергійович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 8, 5, new DateTime(2014, 9, 14, 10, 15, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "ganna@com.ua", "Ганна", "Сумська", "Іванівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
+                values: new object[] { 9, 6, new DateTime(1991, 12, 12, 18, 30, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "olesyaa@com.ua", "Олеся", "Богдан", "Романівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Docs",
+                columns: new[] { "id", "contact_id", "department_id", "hired_at", "office", "specialty" },
+                values: new object[] { 1, 2, 1, new DateTime(1978, 1, 1, 10, 30, 1, 0, DateTimeKind.Unspecified), "101", "терапевт" });
+
+            migrationBuilder.InsertData(
+                table: "Docs",
+                columns: new[] { "id", "contact_id", "department_id", "hired_at", "office", "specialty" },
+                values: new object[] { 2, 5, 2, new DateTime(1985, 3, 21, 9, 0, 0, 0, DateTimeKind.Unspecified), "207", "хірург" });
+
+            migrationBuilder.InsertData(
+                table: "Docs",
+                columns: new[] { "id", "contact_id", "department_id", "hired_at", "office", "specialty" },
+                values: new object[] { 3, 6, 1, new DateTime(2010, 12, 27, 14, 0, 15, 0, DateTimeKind.Unspecified), "101", "педіатр" });
+
+            migrationBuilder.InsertData(
+                table: "Docs",
+                columns: new[] { "id", "contact_id", "department_id", "hired_at", "office", "specialty" },
+                values: new object[] { 4, 3, 3, new DateTime(2000, 7, 12, 8, 37, 0, 0, DateTimeKind.Unspecified), "23", "кардіолог" });
+
+            migrationBuilder.InsertData(
+                table: "Patients",
+                columns: new[] { "id", "contact_id", "created_at", "medical_history_registore_number", "updated_at" },
+                values: new object[] { 1, 1, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "MHR-001", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Patients",
+                columns: new[] { "id", "contact_id", "created_at", "medical_history_registore_number", "updated_at" },
+                values: new object[] { 2, 4, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "MHR-002", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Patients",
+                columns: new[] { "id", "contact_id", "created_at", "medical_history_registore_number", "updated_at" },
+                values: new object[] { 3, 7, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "MHR-003", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Patients",
+                columns: new[] { "id", "contact_id", "created_at", "medical_history_registore_number", "updated_at" },
+                values: new object[] { 4, 8, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "MHR-004", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Patients",
+                columns: new[] { "id", "contact_id", "created_at", "medical_history_registore_number", "updated_at" },
+                values: new object[] { 5, 9, new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "MHR-005", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

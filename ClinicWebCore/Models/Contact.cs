@@ -21,9 +21,11 @@ namespace ClinicWebCore.Models
         [Column("address_id")]
         public int AddressID { get; set; } //  address_id int
         public Address Address { get; set; }
-        [Column("zipcode", TypeName = "timestamp")]
+        [Column("birthday", TypeName = "timestamp")]
+        public DateTime Birthday { get; set; }
+        [Column("created_at", TypeName = "timestamp")]
         public DateTime CreatedAt { get; set; } //  created_at timestamp
-        [Column("zipcode", TypeName = "timestamp")]
+        [Column("updated_at", TypeName = "timestamp")]
         public DateTime UpdatedAt { get; set; } //  updated_at timestamp
         public ICollection<Doc> Docs { get; set; }
         public Patient Patient { get; set; }
