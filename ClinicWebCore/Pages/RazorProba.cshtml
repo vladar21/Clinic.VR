@@ -1,0 +1,84 @@
+﻿@page
+@model ClinicWebCore.Pages.RazorProbaModel
+@{
+}
+
+
+<h1>Hello, world!</h1>
+<h2>The time on the server is @DateTime.Now</h2>
+
+<h2>@Model.Message</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].ContactID)
+            </th>           
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].MiddleName)
+            </th> 
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Address.ZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Address.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Address.Region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Address.Locality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Address.Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Address.House)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contacts[0].Address.Apartment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Contacts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName) @Model.GetInitials(item.FirstName, item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.ZipCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.Region)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.Locality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.Street)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.House)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.Apartment)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.AddressID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.AddressID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.AddressID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

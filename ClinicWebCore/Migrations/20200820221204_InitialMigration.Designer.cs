@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicWebCore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200819145204_InitMigration")]
-    partial class InitMigration
+    [Migration("20200820221204_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -202,7 +202,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Ольга",
                             LastName = "Бородіна",
                             MiddleName = "Вікторівна",
-                            Phone = "Запоріжжя",
+                            Phone = "(068) 234-23-21",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -215,7 +215,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Марія",
                             LastName = "Колесник",
                             MiddleName = "Олександрівна",
-                            Phone = "Запоріжжя",
+                            Phone = "(061) 233-21-22",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -228,7 +228,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Семен",
                             LastName = "Коротич",
                             MiddleName = "Павлович",
-                            Phone = "Запоріжжя",
+                            Phone = "(050) 842-32-62",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -241,7 +241,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Іван",
                             LastName = "Бородін",
                             MiddleName = "Володимирович",
-                            Phone = "Запоріжжя",
+                            Phone = "(067) 622-84-96",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -254,7 +254,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Гнат",
                             LastName = "Колесник",
                             MiddleName = "Миколайович",
-                            Phone = "Запоріжжя",
+                            Phone = "(050) 230-30-20",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -267,7 +267,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Олена",
                             LastName = "Колесник",
                             MiddleName = "Гнатовна",
-                            Phone = "Запоріжжя",
+                            Phone = "(063) 333-77-55",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -280,7 +280,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Віталій",
                             LastName = "Чуб",
                             MiddleName = "Сергійович",
-                            Phone = "Запоріжжя",
+                            Phone = "(098) 543-32-12",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -293,7 +293,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Ганна",
                             LastName = "Сумська",
                             MiddleName = "Іванівна",
-                            Phone = "Запоріжжя",
+                            Phone = "(068) 467-33-20",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -306,7 +306,7 @@ namespace ClinicWebCore.Migrations
                             FirstName = "Олеся",
                             LastName = "Богдан",
                             MiddleName = "Романівна",
-                            Phone = "Запоріжжя",
+                            Phone = "(061) 220-83-21",
                             UpdatedAt = new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified)
                         });
                 });

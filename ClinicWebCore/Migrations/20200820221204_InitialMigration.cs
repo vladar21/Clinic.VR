@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClinicWebCore.Migrations
 {
-    public partial class InitMigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -392,47 +392,47 @@ namespace ClinicWebCore.Migrations
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 1, 1, new DateTime(1950, 3, 3, 10, 30, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "olga@com.ua", "Ольга", "Бородіна", "Вікторівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, 1, new DateTime(1950, 3, 3, 10, 30, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "olga@com.ua", "Ольга", "Бородіна", "Вікторівна", "(068) 234-23-21", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 4, 1, new DateTime(1951, 8, 2, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "ivan@com.ua", "Іван", "Бородін", "Володимирович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 4, 1, new DateTime(1951, 8, 2, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "ivan@com.ua", "Іван", "Бородін", "Володимирович", "(067) 622-84-96", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 2, 2, new DateTime(1955, 11, 23, 21, 5, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "mariya@com.ua", "Марія", "Колесник", "Олександрівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 2, 2, new DateTime(1955, 11, 23, 21, 5, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "mariya@com.ua", "Марія", "Колесник", "Олександрівна", "(061) 233-21-22", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 5, 2, new DateTime(1954, 5, 4, 13, 15, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "gnat@com.ua", "Гнат", "Колесник", "Миколайович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 5, 2, new DateTime(1954, 5, 4, 13, 15, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "gnat@com.ua", "Гнат", "Колесник", "Миколайович", "(050) 230-30-20", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 6, 2, new DateTime(1981, 2, 9, 8, 38, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "alena@com.ua", "Олена", "Колесник", "Гнатовна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 6, 2, new DateTime(1981, 2, 9, 8, 38, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "alena@com.ua", "Олена", "Колесник", "Гнатовна", "(063) 333-77-55", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 3, 3, new DateTime(1970, 7, 15, 14, 35, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "semen@com.ua", "Семен", "Коротич", "Павлович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 3, 3, new DateTime(1970, 7, 15, 14, 35, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "semen@com.ua", "Семен", "Коротич", "Павлович", "(050) 842-32-62", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 7, 4, new DateTime(1981, 3, 2, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "vitaly@com.ua", "Віталій", "Чуб", "Сергійович", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 7, 4, new DateTime(1981, 3, 2, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "vitaly@com.ua", "Віталій", "Чуб", "Сергійович", "(098) 543-32-12", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 8, 5, new DateTime(2014, 9, 14, 10, 15, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "ganna@com.ua", "Ганна", "Сумська", "Іванівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 8, 5, new DateTime(2014, 9, 14, 10, 15, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified), "ganna@com.ua", "Ганна", "Сумська", "Іванівна", "(068) 467-33-20", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Contacts",
                 columns: new[] { "id", "address_id", "birthday", "created_at", "email", "first_name", "last_name", "middle_name", "phone", "updated_at" },
-                values: new object[] { 9, 6, new DateTime(1991, 12, 12, 18, 30, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "olesyaa@com.ua", "Олеся", "Богдан", "Романівна", "Запоріжжя", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 9, 6, new DateTime(1991, 12, 12, 18, 30, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 8, 20, 15, 18, 0, 0, DateTimeKind.Unspecified), "olesyaa@com.ua", "Олеся", "Богдан", "Романівна", "(061) 220-83-21", new DateTime(2020, 8, 19, 15, 18, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Docs",

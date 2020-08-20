@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ClinicWebCore.Models
 {
     public class Contact
     {
-        [Column("id")]
+        [Column("id"), Display(Name = "ID")]
         public int ContactID { get; set; } //  id int
         [Column("first_name", TypeName = "timestamp")]
         public string FirstName { get; set; } //  first_name varchar(255)
@@ -19,7 +20,7 @@ namespace ClinicWebCore.Models
         [Column("email", TypeName = "varchar(255)")]
         public string Email { get; set; } //  email varchar(255)
         [Column("address_id")]
-        public int AddressID { get; set; } //  address_id int
+        public int AddressID { get; set; } //  address_id int        
         public Address Address { get; set; }
         [Column("birthday", TypeName = "timestamp")]
         public DateTime Birthday { get; set; }
@@ -29,6 +30,7 @@ namespace ClinicWebCore.Models
         public DateTime UpdatedAt { get; set; } //  updated_at timestamp
         public ICollection<Doc> Docs { get; set; }
         public Patient Patient { get; set; }
-
+       
     }
+    
 }

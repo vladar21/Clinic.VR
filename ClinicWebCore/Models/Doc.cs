@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ClinicWebCore.Models
 {
     public class Doc
     {
-        [Column("id")]
+        [Column("id"), Display(Name = "ID")]
         public int DocID { get; set; } //  id int
         [Column("contact_id")]
         public int ContactID { get; set; } //  contact_id int

@@ -455,4 +455,15 @@ C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Departments\D
 C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Departments\Details.cshtml.g.cs
 C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Departments\Edit.cshtml.g.cs
 C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Departments\Index.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\RazorProba.cshtml.g.cs
 C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\ClinicWebCore.csprojAssemblyReference.cache
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patients\Create.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patients\Delete.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patients\Details.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patients\Edit.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patients\Index.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Contacts\Create.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Contacts\Delete.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Contacts\Details.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Contacts\Edit.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Contacts\Index.cshtml.g.cs

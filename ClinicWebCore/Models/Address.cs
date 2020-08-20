@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ClinicWebCore.Models
 {
     public class Address
     {
-        [Column("id")]
+        [Column("id"), Display(Name = "ID")]
         public int AddressID { get; set; } //  id int
         [Column("zipcode", TypeName = "varchar(255)")]
         public string ZipCode { get; set; } //  zipcode varchar(255)
