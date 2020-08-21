@@ -20,19 +20,27 @@ namespace ClinicWebCore.Pages.Patients
         }
 
         public IList<Patient> Patient { get;set; }
+        public IList<Address> AddressList { get; set; }
 
         public async Task OnGetAsync()
         {
             Patient = await _context.Patients
-                .Include(p => p.Contact)
-                .ThenInclude(a => a.Address)
-                .AsNoTracking()                
-                .ToListAsync();
+                .Include(p => p.Contact).ToListAsync();
+
+            AddressList = await _context.Addresses.ToListAsync();
         }
-        // Добавляем инициалы к фамилии
+        // Получаем инициалы
         public string GetInitials(string FirstName, string MiddleName)
         {
             return FirstName.Substring(0, 1) + '.' + MiddleName.Substring(0, 1) + '.';
+        }
+
+        // Адрес в строку
+        public string GetAddressToString(int id)
+        {
+            var adr = AddressList.FirstOrDefault(m => m.AddressID == id);
+            string addr = adr.Country + ", " + adr.Locality + ", " + adr.Street + ", " + adr.House + "/ " + adr.Apartment;
+            return addr;
         }
     }
 }

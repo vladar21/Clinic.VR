@@ -22,6 +22,8 @@ namespace ClinicWebCore.Pages.Contacts
         [BindProperty]
         public Contact Contact { get; set; }
 
+        public IList<Address> AddressList { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -36,6 +38,9 @@ namespace ClinicWebCore.Pages.Contacts
             {
                 return NotFound();
             }
+
+            AddressList = await _context.Addresses.ToListAsync();
+
             return Page();
         }
 
@@ -55,6 +60,14 @@ namespace ClinicWebCore.Pages.Contacts
             }
 
             return RedirectToPage("./Index");
+        }
+
+        // Адрес в строку
+        public string GetAddressToString(int id)
+        {
+            var adr = AddressList.FirstOrDefault(m => m.AddressID == id);
+            string addr = adr.Country + ", " + adr.Locality + ", " + adr.Street + ", " + adr.House + "/ " + adr.Apartment;
+            return addr;
         }
     }
 }

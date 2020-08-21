@@ -22,6 +22,7 @@ namespace ClinicWebCore.Pages.Patients
 
         [BindProperty]
         public Patient Patient { get; set; }
+        public IList<Address> AddressList { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -38,6 +39,9 @@ namespace ClinicWebCore.Pages.Patients
                 return NotFound();
             }
            ViewData["ContactID"] = new SelectList(_context.Contacts, "ContactID", "FirstName");
+
+            AddressList = await _context.Addresses.ToListAsync();
+
             return Page();
         }
 
@@ -74,6 +78,20 @@ namespace ClinicWebCore.Pages.Patients
         private bool PatientExists(int id)
         {
             return _context.Patients.Any(e => e.PatientID == id);
+        }
+
+        // Получаем инициалы
+        public string GetInitials(string FirstName, string MiddleName)
+        {
+            return FirstName.Substring(0, 1) + '.' + MiddleName.Substring(0, 1) + '.';
+        }
+
+        // Адрес в строку
+        public string GetAddressToString(int id)
+        {
+            var adr = AddressList.FirstOrDefault(m => m.AddressID == id);
+            string addr = adr.Country + ", " + adr.Locality + ", " + adr.Street + ", " + adr.House + "/ " + adr.Apartment;
+            return addr;
         }
     }
 }

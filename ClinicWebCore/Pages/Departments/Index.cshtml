@@ -2,11 +2,11 @@
 @model ClinicWebCore.Pages.Departments.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Департаменти";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Департаменти</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -23,12 +23,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Department[0].Name)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Department[0].CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Department[0].UpdatedAt)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -44,12 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedAt)
-            </td>
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.DepartmentID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.DepartmentID">Details</a> |

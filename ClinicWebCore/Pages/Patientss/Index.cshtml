@@ -2,11 +2,11 @@
 @model ClinicWebCore.Pages.Patients.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Пацієнти";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Пацієнти</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -15,17 +15,15 @@
     <thead>
         <tr>
             <th>
-                FIO
+                @Html.DisplayNameFor(model => model.Patient[0].Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Contact.Address)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Patient[0].MedicalHistoryRegistoreNumber)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Patient[0].CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Patient[0].UpdatedAt)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -36,14 +34,12 @@
                 @Html.DisplayFor(modelItem => item.Contact.LastName) @Model.GetInitials(item.Contact.FirstName, item.Contact.MiddleName)
             </td>
             <td>
+                @Model.GetAddressToString(item.Contact.Address.AddressID)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.MedicalHistoryRegistoreNumber)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedAt)
-            </td>
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.PatientID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.PatientID">Details</a> |

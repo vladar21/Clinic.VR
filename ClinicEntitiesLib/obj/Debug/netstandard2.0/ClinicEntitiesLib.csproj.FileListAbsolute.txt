@@ -20,3 +20,4 @@ C:\Users\Vlad\source\repos\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\
 C:\Users\Vlad\source\repos\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.dll
 C:\Users\Vlad\source\repos\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.pdb
 C:\Users\Vlad\source\repos\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csprojAssemblyReference.cache
+C:\www\Clinic.VR\ClinicEntitiesLib\obj\Debug\netstandard2.0\ClinicEntitiesLib.csprojAssemblyReference.cache

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicEntitiesLib", "Clinic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicContextLib", "ClinicContextLib\ClinicContextLib.csproj", "{860FD2EC-A27E-45B4-AF9F-96E5E7E31AFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicWebCore", "ClinicWebCore\ClinicWebCore.csproj", "{AC12B35C-AC71-49C6-9CA9-8F3226E0E8BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicWebCore", "ClinicWebCore\ClinicWebCore.csproj", "{AC12B35C-AC71-49C6-9CA9-8F3226E0E8BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -23,7 +23,8 @@ namespace ClinicWebCore.Pages.Departments
 
         public async Task OnGetAsync()
         {
-            Department = await _context.Departments.ToListAsync();
+            Department = await _context.Departments.OrderBy(d => d.ParentID).ThenBy(d => d.Name).ToListAsync();
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ClinicWebCore.Models
         [Column("contact_id")]
         public int ContactID { get; set; } //  contact_id int        
         public Contact Contact { get; set; }
-        [Column("medical_history_registore_number", TypeName = "timestamp")]
+        [Column("medical_history_registore_number"), Display(Name = "MedicalHistory")]
         public string MedicalHistoryRegistoreNumber { get; set; } 
         //  medical_history_registore_number varchar(255)
         [Column("created_at", TypeName = "timestamp")]
