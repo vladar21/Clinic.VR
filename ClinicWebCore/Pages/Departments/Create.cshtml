@@ -15,8 +15,18 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Department.ParentID" class="control-label"></label>
-                <input asp-for="Department.ParentID" class="form-control" />
+                <label class="control-label">Parent Department</label>
+                <select asp-for="Department.ParentID" class="form-control">
+                    <option value="">Підпорядкованість</option>
+                    @foreach (var item in Model.DepartmentList)
+                    {
+                        <option value="@item.DepartmentID">
+                            @Model.GetParentName(item.DepartmentID)
+                        </option>
+                    }
+
+                </select>
+                @*<input asp-for="Department.ParentID" class="form-control" />*@
                 <span asp-validation-for="Department.ParentID" class="text-danger"></span>
             </div>
             <div class="form-group">

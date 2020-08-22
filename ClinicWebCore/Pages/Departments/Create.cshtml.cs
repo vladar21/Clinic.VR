@@ -13,6 +13,7 @@ namespace ClinicWebCore.Pages.Departments
     public class CreateModel : PageModel
     {
         private readonly ClinicWebCore.Data.ApplicationDbContext _context;
+        public IList<Department> DepartmentList { get; set; }
 
         public CreateModel(ClinicWebCore.Data.ApplicationDbContext context)
         {
@@ -21,6 +22,8 @@ namespace ClinicWebCore.Pages.Departments
 
         public IActionResult OnGet()
         {
+            DepartmentList = _context.Departments.OrderBy(d => d.ParentID).ThenBy(d => d.Name).ToList();
+
             return Page();
         }
 
@@ -40,6 +43,14 @@ namespace ClinicWebCore.Pages.Departments
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+
+        public string GetParentName(int? id)
+        {
+            if (id == null) { return null; }
+            var parentName = DepartmentList.FirstOrDefault(d => d.DepartmentID == id);
+            string pN = parentName.Name;
+            return pN;
         }
     }
 }

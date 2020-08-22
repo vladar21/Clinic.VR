@@ -14,10 +14,17 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Patient.Contact)
+            Contact
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Patient.Contact.FirstName)
+            @Html.DisplayFor(model => model.Patient.Contact.LastName)
+            @Model.GetInitials(this.Model.Patient.Contact.FirstName, this.Model.Patient.Contact.MiddleName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Patient.Contact.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.GetAddressToString(this.Model.Patient.Contact.Address.AddressID)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Patient.MedicalHistoryRegistoreNumber)

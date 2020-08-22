@@ -14,10 +14,10 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Department.ParentID)
+            Parent Department
         </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Department.ParentID)
+        <dd class="col-sm-10">           
+            @Model.GetParentName(this.Model.Department.ParentID)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Department.Name)

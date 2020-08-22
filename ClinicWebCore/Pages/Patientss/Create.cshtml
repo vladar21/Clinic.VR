@@ -16,7 +16,16 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Patient.ContactID" class="control-label"></label>
-                <select asp-for="Patient.ContactID" class ="form-control" asp-items="ViewBag.ContactID"></select>
+                <select asp-for="Patient.ContactID" class="form-control">
+                    <option value="">Вибір контакту</option>
+                    @foreach (var item in Model.ContactList)
+                    {
+                        <option value="@item.ContactID">
+                            @item.LastName @Model.GetInitials(item.FirstName, item.MiddleName)
+                        </option>
+                    }
+
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="Patient.MedicalHistoryRegistoreNumber" class="control-label"></label>

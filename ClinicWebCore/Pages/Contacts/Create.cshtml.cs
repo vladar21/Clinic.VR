@@ -13,6 +13,7 @@ namespace ClinicWebCore.Pages.Contacts
     public class CreateModel : PageModel
     {
         private readonly ClinicWebCore.Data.ApplicationDbContext _context;
+        public IList<Address> AddressList { get; set; }
 
         public CreateModel(ClinicWebCore.Data.ApplicationDbContext context)
         {
@@ -21,7 +22,11 @@ namespace ClinicWebCore.Pages.Contacts
 
         public IActionResult OnGet()
         {
-        ViewData["AddressID"] = new SelectList(_context.Addresses, "AddressID", "AddressID");
+
+            ViewData["AddressID"] = new SelectList(_context.Addresses, "AddressID", "AddressID");
+
+            AddressList = _context.Addresses.ToList();
+
             return Page();
         }
 
@@ -41,6 +46,14 @@ namespace ClinicWebCore.Pages.Contacts
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+
+        // Адрес в строку
+        public string GetAddressToString(int id)
+        {
+            var adr = AddressList.FirstOrDefault(m => m.AddressID == id);
+            string addr = adr.Country + ", " + adr.Locality + ", " + adr.Street + ", " + adr.House + "/ " + adr.Apartment;
+            return addr;
         }
     }
 }

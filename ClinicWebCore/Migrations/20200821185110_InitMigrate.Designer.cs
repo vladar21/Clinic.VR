@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicWebCore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200820221204_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20200821185110_InitMigrate")]
+    partial class InitMigrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -567,7 +567,7 @@ namespace ClinicWebCore.Migrations
                     b.Property<string>("MedicalHistoryRegistoreNumber")
                         .IsRequired()
                         .HasColumnName("medical_history_registore_number")
-                        .HasColumnType("timestamp")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(255);
 
                     b.Property<DateTime>("UpdatedAt")

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ClinicWebCore.Data;
 using ClinicWebCore.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ClinicWebCore.Pages.Departments
 {
@@ -19,12 +20,20 @@ namespace ClinicWebCore.Pages.Departments
             _context = context;
         }
 
-        public IList<Department> Department { get;set; }
+        public IList<Department> Department { get;set; }        
 
         public async Task OnGetAsync()
         {
-            Department = await _context.Departments.OrderBy(d => d.ParentID).ThenBy(d => d.Name).ToListAsync();
+            Department = await _context.Departments.OrderBy(d => d.ParentID).ThenBy(d => d.Name).ToListAsync();          
 
+        }
+
+        public string GetParentName(int? id)
+        {
+            if (id == null) { return null; }
+            var parentName = Department.FirstOrDefault(d => d.DepartmentID == id);
+            string pN = parentName.Name;
+            return pN;
         }
     }
 }

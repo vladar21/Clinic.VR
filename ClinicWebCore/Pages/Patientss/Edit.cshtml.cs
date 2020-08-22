@@ -23,6 +23,7 @@ namespace ClinicWebCore.Pages.Patients
         [BindProperty]
         public Patient Patient { get; set; }
         public IList<Address> AddressList { get; set; }
+        public IList<Contact> ContactList { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -41,6 +42,7 @@ namespace ClinicWebCore.Pages.Patients
            ViewData["ContactID"] = new SelectList(_context.Contacts, "ContactID", "FirstName");
 
             AddressList = await _context.Addresses.ToListAsync();
+            ContactList = await _context.Contacts.ToListAsync();
 
             return Page();
         }

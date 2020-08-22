@@ -565,7 +565,7 @@ namespace ClinicWebCore.Migrations
                     b.Property<string>("MedicalHistoryRegistoreNumber")
                         .IsRequired()
                         .HasColumnName("medical_history_registore_number")
-                        .HasColumnType("timestamp")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(255);
 
                     b.Property<DateTime>("UpdatedAt")

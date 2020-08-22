@@ -14,6 +14,8 @@ namespace ClinicWebCore.Pages.Patients
     {
         private readonly ClinicWebCore.Data.ApplicationDbContext _context;
 
+        public IList<Contact> ContactList { get; set; }
+
         public CreateModel(ClinicWebCore.Data.ApplicationDbContext context)
         {
             _context = context;
@@ -21,7 +23,11 @@ namespace ClinicWebCore.Pages.Patients
 
         public IActionResult OnGet()
         {
-        ViewData["ContactID"] = new SelectList(_context.Contacts, "ContactID", "FirstName");
+        
+            ViewData["ContactID"] = new SelectList(_context.Contacts, "ContactID", "FirstName");
+
+            ContactList = _context.Contacts.ToList();
+
             return Page();
         }
 
@@ -41,6 +47,12 @@ namespace ClinicWebCore.Pages.Patients
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+
+        // Получаем инициалы
+        public string GetInitials(string FirstName, string MiddleName)
+        {
+            return FirstName.Substring(0, 1) + '.' + MiddleName.Substring(0, 1) + '.';
         }
     }
 }

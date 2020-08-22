@@ -18,7 +18,7 @@
                 @Html.DisplayNameFor(model => model.Department[0].DepartmentID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Department[0].ParentID)
+                Parent Department
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Department[0].Name)
@@ -34,7 +34,7 @@
                 @Html.DisplayFor(modelItem => item.DepartmentID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ParentID)
+                @Model.GetParentName(item.ParentID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)

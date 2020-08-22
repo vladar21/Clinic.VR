@@ -14,6 +14,8 @@ namespace ClinicWebCore.Pages.Patients
     {
         private readonly ClinicWebCore.Data.ApplicationDbContext _context;
 
+        public IList<Address> AddressList { get; set; }
+
         public DeleteModel(ClinicWebCore.Data.ApplicationDbContext context)
         {
             _context = context;
@@ -36,6 +38,9 @@ namespace ClinicWebCore.Pages.Patients
             {
                 return NotFound();
             }
+
+            AddressList = await _context.Addresses.ToListAsync();
+
             return Page();
         }
 
@@ -55,6 +60,20 @@ namespace ClinicWebCore.Pages.Patients
             }
 
             return RedirectToPage("./Index");
+        }
+
+        // Получаем инициалы
+        public string GetInitials(string FirstName, string MiddleName)
+        {
+            return FirstName.Substring(0, 1) + '.' + MiddleName.Substring(0, 1) + '.';
+        }
+
+        // Адрес в строку
+        public string GetAddressToString(int id)
+        {
+            var adr = AddressList.FirstOrDefault(m => m.AddressID == id);
+            string addr = adr.Country + ", " + adr.Locality + ", " + adr.Street + ", " + adr.House + "/ " + adr.Apartment;
+            return addr;
         }
     }
 }

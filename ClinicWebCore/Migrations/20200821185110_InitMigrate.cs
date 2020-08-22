@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClinicWebCore.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitMigrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -244,7 +244,7 @@ namespace ClinicWebCore.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     contact_id = table.Column<int>(nullable: false),
-                    medical_history_registore_number = table.Column<string>(type: "timestamp", maxLength: 255, nullable: false),
+                    medical_history_registore_number = table.Column<string>(maxLength: 255, nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp", nullable: false),
                     updated_at = table.Column<DateTime>(type: "timestamp", nullable: false)
                 },
