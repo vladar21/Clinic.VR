@@ -1,0 +1,62 @@
+﻿@page
+@model ClinicWebCore.Pages.Docs.IndexModel
+
+@{
+    ViewData["Title"] = "Доктора";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Доктора</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Contact
+            </th>
+            <th>
+                Department
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doc[0].Specialty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doc[0].Office)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doc[0].HiredAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Doc) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact.LastName)  @Model.GetInitials(item.Contact.FirstName, item.Contact.MiddleName)
+                    </td>
+            <td>
+                @Model.GetDepartamentName(item.DepartmentID)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Office)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HiredAt)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.DocID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.DocID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.DocID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

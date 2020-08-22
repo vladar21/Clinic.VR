@@ -467,3 +467,14 @@ C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patientss\Del
 C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patientss\Details.cshtml.g.cs
 C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patientss\Edit.cshtml.g.cs
 C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Patientss\Index.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\www\Clinic.VR\ClinicWebCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\www\Clinic.VR\ClinicWebCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\www\Clinic.VR\ClinicWebCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\www\Clinic.VR\ClinicWebCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\www\Clinic.VR\ClinicWebCore\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Docs\Create.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Docs\Delete.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Docs\Details.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Docs\Edit.cshtml.g.cs
+C:\www\Clinic.VR\ClinicWebCore\obj\Debug\netcoreapp3.1\Razor\Pages\Docs\Index.cshtml.g.cs

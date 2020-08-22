@@ -1,0 +1,71 @@
+﻿@page
+@model ClinicWebCore.Pages.Docs.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Doc</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Doc.ContactID" class="control-label"></label>
+                <select asp-for="Doc.ContactID" class="form-control">
+                    <option value="">Вибір контакту</option>
+                    @foreach (var item in Model.ContactList)
+                    {
+                        <option value="@item.ContactID">
+                            @item.LastName @Model.GetInitials(item.FirstName, item.MiddleName)
+                        </option>
+                    }
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Doc.DepartmentID" class="control-label"></label>
+                <select asp-for="Doc.DepartmentID" class="form-control">
+                    <option value="">Вибір департаменту</option>
+                    @foreach (var item in Model.DepartmentList)
+                    {
+                        <option value="@item.DepartmentID">
+                            @Model.GetDepartamentName(item.DepartmentID)
+                        </option>
+                    }
+                </select>
+                <span asp-validation-for="Doc.DepartmentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Doc.Specialty" class="control-label"></label>
+                <input asp-for="Doc.Specialty" class="form-control" />
+                <span asp-validation-for="Doc.Specialty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Doc.Office" class="control-label"></label>
+                <input asp-for="Doc.Office" class="form-control" />
+                <span asp-validation-for="Doc.Office" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Doc.HiredAt" class="control-label"></label>
+                <input asp-for="Doc.HiredAt" class="form-control" />
+                <span asp-validation-for="Doc.HiredAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
