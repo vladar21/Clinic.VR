@@ -1,0 +1,85 @@
+﻿@page
+@model ClinicWebCore.Pages.PatSchedules.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>DocSchedule</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DocSchedule.DocScheduleID" />
+            <div class="form-group">
+                <label asp-for="DocSchedule.PatientID" class="control-label"></label>
+                <select asp-for="DocSchedule.PatientID" class="form-control" asp-items="ViewBag.PatientID"></select>
+
+                <span asp-validation-for="DocSchedule.PatientID" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label type="hidden" class="form-check-label">
+                    <input type="hidden" class="form-check-input" asp-for="DocSchedule.IsVisitPatient" /> @*@Html.DisplayNameFor(model => model.DocSchedule.IsVisitPatient)*@
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocSchedule.DocID" class="control-label"></label>
+                <select asp-for="DocSchedule.DocID" class="form-control" asp-items="ViewBag.DocID">
+               
+                </select>              
+
+                <span asp-validation-for="DocSchedule.DocID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="DocSchedule.DocScheduleYear" class="control-label"></label>*@
+                <input type="hidden" asp-for="DocSchedule.DocScheduleYear" class="form-control" />
+                <span asp-validation-for="DocSchedule.DocScheduleYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="DocSchedule.WeekNumber" class="control-label"></label>*@
+                <input type="hidden" asp-for="DocSchedule.WeekNumber" class="form-control" />
+                <span asp-validation-for="DocSchedule.WeekNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="DocSchedule.DayOfWeek" class="control-label"></label>*@
+                <input type="hidden" asp-for="DocSchedule.DayOfWeek" class="form-control" />
+                <span asp-validation-for="DocSchedule.DayOfWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocSchedule.StartAppointmentAt" class="control-label"></label>
+                <input asp-for="DocSchedule.StartAppointmentAt" class="form-control" readonly/>
+                <span asp-validation-for="DocSchedule.StartAppointmentAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocSchedule.FinishAppointmentAt" class="control-label"></label>
+                <input asp-for="DocSchedule.FinishAppointmentAt" class="form-control" readonly/>
+                <span asp-validation-for="DocSchedule.FinishAppointmentAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="DocSchedule.CreatedAt" class="control-label"></label>*@
+                <input type="hidden" asp-for="DocSchedule.CreatedAt" class="form-control" />
+                <span asp-validation-for="DocSchedule.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label type="hidden" asp-for="DocSchedule.UpdatedAt" class="control-label"></label>*@
+                <input type="hidden" asp-for="DocSchedule.UpdatedAt" class="form-control" />
+                <span asp-validation-for="DocSchedule.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

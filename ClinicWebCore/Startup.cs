@@ -34,7 +34,16 @@ namespace ClinicWebCore
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorPagesOptions(options =>
+            {
+                //Use the below line to change the default directory
+                //for your Razor Pages.
+                options.RootDirectory = "/Pages";
+
+                //Use the below line to change the default
+                //"landing page" of the application.
+                options.Conventions.AddPageRoute("/Home/Index", "");
+            }); ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,13 +68,19 @@ namespace ClinicWebCore
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //    endpoints.MapRazorPages();
+            //});
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
         }
     }
 }

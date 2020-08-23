@@ -1,0 +1,74 @@
+﻿@page
+@model ClinicWebCore.Pages.Home.IndexModel
+
+@{
+    ViewData["Title"] = "Розклад лікарні";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Розклад лікарні</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                Year
+            </th>
+            <th>
+                Week
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].DayOfWeek)
+            </th>
+            <th>
+                DocAndOffice
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].StartAppointmentAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].FinishAppointmentAt)
+            </th>
+            <th>
+                PatientAndMedicalHistory
+            </th>
+            <th>
+                IsVisitPatient
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.DocSchedule) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocScheduleYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeekNumber)
+            </td>
+            <td>
+                @Model.GetDayOfWeek(item.StartAppointmentAt)
+            </td>
+            <td>
+                @Model.GetDocFIO(item.DocID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartAppointmentAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinishAppointmentAt)
+            </td>
+            <td>
+                @Model.GetPatientFIO(item.PatientID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsVisitPatient)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>

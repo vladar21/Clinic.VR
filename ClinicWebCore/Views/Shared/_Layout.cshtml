@@ -11,7 +11,8 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ClinicWebCore</a>
+                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Home">ClinicWebCore</a>*@
+                <a class="navbar-brand" href="/Home">ClinicWebCore</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,11 +21,20 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>*@
+                            <a class="nav-link text-dark" href="/Home">Home</a>
+
                         </li>
+                        <li><a class="nav-link text-dark" href="/DocSchedules">DocSchedule</a></li>
+                        <li><a class="nav-link text-dark" href="/Docs">Docs</a></li>
+                        <li><a class="nav-link text-dark" href="/PatSchedules">PatientSchedule</a></li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+                            <a class="nav-link text-dark" href="/Patientss">Patients</a>
                         </li>
+                        <li><a class="nav-link text-dark" href="/Departments">Departments</a></li>
+                        <li><a class="nav-link text-dark" href="/Contacts">Contacts</a></li>
+                        <li><a class="nav-link text-dark" href="/Addresses">Addresses</a></li>
                     </ul>
                 </div>
             </div>

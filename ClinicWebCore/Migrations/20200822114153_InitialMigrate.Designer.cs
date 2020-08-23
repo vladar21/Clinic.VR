@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicWebCore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200821185110_InitMigrate")]
-    partial class InitMigrate
+    [Migration("20200822114153_InitialMigrate")]
+    partial class InitialMigrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -498,8 +498,11 @@ namespace ClinicWebCore.Migrations
                         .HasColumnName("created_at")
                         .HasColumnType("timestamp");
 
+                    b.Property<byte?>("DayOfWeek")
+                        .HasColumnName("week_day")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int?>("DepartmentID")
-                        .HasColumnName("department_id")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("DocID")
@@ -510,7 +513,7 @@ namespace ClinicWebCore.Migrations
                         .HasColumnName("doc_schedule_year")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("FinishAppointmentAt")
+                    b.Property<DateTime?>("FinishAppointmentAt")
                         .HasColumnName("finish_appointment_at")
                         .HasColumnType("timestamp");
 
@@ -522,7 +525,7 @@ namespace ClinicWebCore.Migrations
                         .HasColumnName("patient_id")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("StartAppointmentAt")
+                    b.Property<DateTime?>("StartAppointmentAt")
                         .HasColumnName("start_appointment_at")
                         .HasColumnType("timestamp");
 
@@ -530,11 +533,7 @@ namespace ClinicWebCore.Migrations
                         .HasColumnName("updated_at")
                         .HasColumnType("timestamp");
 
-                    b.Property<int?>("WeekDay")
-                        .HasColumnName("week_day")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("WeekNumber")
+                    b.Property<byte?>("WeekNumber")
                         .HasColumnName("week_number")
                         .HasColumnType("INTEGER");
 
@@ -855,7 +854,7 @@ namespace ClinicWebCore.Migrations
 
             modelBuilder.Entity("ClinicWebCore.Models.DocSchedule", b =>
                 {
-                    b.HasOne("ClinicWebCore.Models.Department", "Department")
+                    b.HasOne("ClinicWebCore.Models.Department", null)
                         .WithMany("DocSchedules")
                         .HasForeignKey("DepartmentID");
 

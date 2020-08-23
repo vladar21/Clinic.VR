@@ -356,7 +356,7 @@ namespace ClinicWebCore.Data
             // Сущность DocSchedule
             modelBuilder.Entity<DocSchedule>().HasOne(d => d.Patient).WithMany(p => p.DocSchedules);
             modelBuilder.Entity<DocSchedule>().HasOne(d => d.Doc).WithMany(s => s.DocSchedules);
-            modelBuilder.Entity<DocSchedule>().HasOne(d => d.Department).WithMany(s => s.DocSchedules);
+            
 
             // Сущность Department
             modelBuilder.Entity<Department>().Property(d => d.Name).IsRequired().HasMaxLength(255);

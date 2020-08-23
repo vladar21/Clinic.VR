@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ClinicWebCore.Migrations
 {
-    public partial class InitMigrate : Migration
+    public partial class InitialMigrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -292,21 +292,21 @@ namespace ClinicWebCore.Migrations
                     patient_id = table.Column<int>(nullable: true),
                     is_visit_patient = table.Column<bool>(type: "tinyint", nullable: false),
                     doc_id = table.Column<int>(nullable: true),
-                    department_id = table.Column<int>(nullable: true),
                     doc_schedule_year = table.Column<int>(nullable: true),
-                    week_number = table.Column<int>(nullable: true),
-                    week_day = table.Column<int>(nullable: true),
-                    start_appointment_at = table.Column<DateTime>(type: "timestamp", nullable: false),
-                    finish_appointment_at = table.Column<DateTime>(type: "timestamp", nullable: false),
+                    week_number = table.Column<byte>(nullable: true),
+                    week_day = table.Column<byte>(nullable: true),
+                    start_appointment_at = table.Column<DateTime>(type: "timestamp", nullable: true),
+                    finish_appointment_at = table.Column<DateTime>(type: "timestamp", nullable: true),
                     created_at = table.Column<DateTime>(type: "timestamp", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "timestamp", nullable: false)
+                    updated_at = table.Column<DateTime>(type: "timestamp", nullable: false),
+                    DepartmentID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DocSchedules", x => x.id);
                     table.ForeignKey(
-                        name: "FK_DocSchedules_Departments_department_id",
-                        column: x => x.department_id,
+                        name: "FK_DocSchedules_Departments_DepartmentID",
+                        column: x => x.DepartmentID,
                         principalTable: "Departments",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
@@ -532,9 +532,9 @@ namespace ClinicWebCore.Migrations
                 column: "contact_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DocSchedules_department_id",
+                name: "IX_DocSchedules_DepartmentID",
                 table: "DocSchedules",
-                column: "department_id");
+                column: "DepartmentID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DocSchedules_doc_id",

@@ -1,0 +1,79 @@
+﻿@page
+@model ClinicWebCore.Pages.PatSchedules.IndexModel
+
+@{
+    ViewData["Title"] = "Розклад для пацієнтів";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Розклад для пацієнтів</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               PatientAndMedicalHistory
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].IsVisitPatient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].Doc)
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+                Week
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].DayOfWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].StartAppointmentAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocSchedule[0].FinishAppointmentAt)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.DocSchedule) {
+        <tr>
+            <td>
+               @Model.GetPatientFIO(item.PatientID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsVisitPatient)
+            </td>
+            <td>
+                @Model.GetDocFIO(item.DocID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocScheduleYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeekNumber)
+            </td>
+            <td>
+                @Model.GetDayOfWeek(item.StartAppointmentAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartAppointmentAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinishAppointmentAt)
+            </td>
+
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.DocScheduleID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.DocScheduleID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.DocScheduleID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

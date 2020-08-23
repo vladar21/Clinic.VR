@@ -16,19 +16,17 @@ namespace ClinicWebCore.Models
         [Column("doc_id")]
         public int? DocID { get; set; } //  doc_id int
         public Doc Doc { get; set; }
-        [Column("department_id")]
-        public int? DepartmentID { get; set; } //  department_id int
-        public Department Department { get; set; }
+       
         [Column("doc_schedule_year")]
         public int? DocScheduleYear { get; set; } //  doc_schedule_year int
         [Column("week_number")]
-        public int? WeekNumber { get; set; } //  week_number int
+        public byte? WeekNumber { get; set; } //  week_number int
         [Column("week_day")]
-        public int? WeekDay { get; set; } //  week_day int
+        public byte? DayOfWeek { get; set; } //  week_day int
         [Column("start_appointment_at", TypeName = "timestamp")]
-        public DateTime StartAppointmentAt { get; set; } //  start_appointment_at timestamp
+        public DateTime? StartAppointmentAt { get; set; } //  start_appointment_at timestamp
         [Column("finish_appointment_at", TypeName = "timestamp")]
-        public DateTime FinishAppointmentAt { get; set; } //  finish_appointment_at timestamp
+        public DateTime? FinishAppointmentAt { get; set; } //  finish_appointment_at timestamp
         [Column("created_at", TypeName = "timestamp")]
         public DateTime CreatedAt { get; set; } //  created_at timestamp
         [Column("updated_at", TypeName = "timestamp")]

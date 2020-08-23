@@ -1,0 +1,61 @@
+﻿@page
+@model ClinicWebCore.Pages.DocSchedules.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>DocSchedule</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label><b>Patient</b></label>
+                <label>Free</label>
+                
+            </div>
+            
+            <div class="form-group">
+                <label>Doc</label>
+                <select asp-for="DocSchedule.DocID" class="form-control">
+                    <option value="">Вибір лікаря</option>
+                    @foreach (var item in Model.Doc)
+                    {
+                        <option value="@item.DocID">
+                            @Model.GetDocFIO(item.DocID)
+                        </option>
+                    }
+
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="DocSchedule.StartAppointmentAt" class="control-label"></label>
+                <input asp-for="DocSchedule.StartAppointmentAt" class="form-control" />
+                <span asp-validation-for="DocSchedule.StartAppointmentAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocSchedule.FinishAppointmentAt" class="control-label"></label>
+                <input asp-for="DocSchedule.FinishAppointmentAt" class="form-control" />
+                <span asp-validation-for="DocSchedule.FinishAppointmentAt" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
